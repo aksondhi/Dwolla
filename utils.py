@@ -2,7 +2,7 @@ import requests
 import json
 
 baseURL = "http://api.openweathermap.org/data/2.5/weather"
-apiKey = "c7979a2aafa529e8840c4c70a3c9f14a"
+apiKey = "09cc49e8cc6fd18f0e3455a455e7835d"
 
 
 def getCity():
