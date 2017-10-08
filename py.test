@@ -2,7 +2,6 @@ import unittest
 import mock
 import __builtin__
 from utils import *
-from main import main
 
 def test_raw_input():
     return raw_input()
