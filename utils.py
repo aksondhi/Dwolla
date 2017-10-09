@@ -1,3 +1,6 @@
+# This file contains utility functions for city input via the user and retrieving weather data from Open Weather Map.
+__author__ = "Arun Sondhi"
+
 import requests
 import json
 
@@ -13,6 +16,7 @@ def getCity():
     city = raw_input("Where are you? ")
     return city
 
+
 def getWeather(city):
     """
     Retrieves the given city's weather data. Raises a value error if the query fails to return a valid result.
@@ -23,6 +27,7 @@ def getWeather(city):
     response = json.loads(request.content)
 
     if response.get('cod') != 200:
-        raise ValueError(response.get("message", False) if "message" in response else ("Request Error. Status: " + str(request.status_code)))
+        raise ValueError(response.get("message", False) if "message" in response else (
+            "Request Error. Status: " + str(request.status_code)))
 
     return response

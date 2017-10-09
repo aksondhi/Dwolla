@@ -1,13 +1,17 @@
+# This file contains contains tests for the utils.py methods.
+__author__ = "Arun Sondhi"
+
 import unittest
 import mock
 import __builtin__
 from utils import *
 
+
 def test_raw_input():
     return raw_input()
 
-class TestUtils(unittest.TestCase):
 
+class TestUtils(unittest.TestCase):
     @mock.patch.object(__builtin__, 'raw_input')
     def test_getCity(self, mock_raw_input):
         # Testing input handler
@@ -32,6 +36,7 @@ class TestUtils(unittest.TestCase):
         # Testing invalid input
         with self.assertRaises(ValueError):
             weather = getWeather("abcdefg")
+
 
 if __name__ == '__main__':
     unittest.main()

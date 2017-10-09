@@ -1,7 +1,11 @@
+__author__ = "Arun Sondhi"
+
 from utils import *
 
-def main():
 
+# The main method functions as the user interface to retrieve user input and then temperature.
+# If the user fails to input a valid city, they will continue to be prompted until a valid city is provided.
+def main():
     city = None
     weather = None
 
@@ -19,12 +23,13 @@ def main():
             if "main" in weather and "temp" in weather.get("main"):
                 print weather.get("name"), "weather:"
                 print str(weather.get("main").get("temp")) + " degrees Fahrenheit"
+                break
             else:
                 print "No weather data available."
-            break
 
         except ValueError:
             print "Invalid city."
+
 
 if __name__ == "__main__":
     main()
