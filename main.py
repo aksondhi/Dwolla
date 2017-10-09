@@ -6,9 +6,6 @@ from utils import *
 # The main method functions as the user interface to retrieve user input and then temperature.
 # If the user fails to input a valid city, they will continue to be prompted until a valid city is provided.
 def main():
-    city = None
-    weather = None
-
     # Allowing input until a valid city is provided
     while True:
 
@@ -22,7 +19,7 @@ def main():
             # Confirming the temperature is provided
             if "main" in weather and "temp" in weather.get("main"):
                 print weather.get("name"), "weather:"
-                print str(weather.get("main").get("temp")) + " degrees Fahrenheit"
+                print str(round(weather.get("main").get("temp"), 2)) + " degrees Fahrenheit"
                 break
             else:
                 print "No weather data available."
