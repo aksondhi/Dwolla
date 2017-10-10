@@ -11,6 +11,7 @@ To install execute: `pip install -r requirements.txt`
 
 Execution
 ---------
+Your Open Weather Map API key is required as an environment variable "OPENWEATHERMAPKEY".
 Execute: `python main.py` and follow the instructions.
 
 Note: Travis-CI has been used to test using the test.py script.

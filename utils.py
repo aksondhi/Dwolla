@@ -3,9 +3,15 @@ __author__ = "Arun Sondhi"
 
 import requests
 import json
+import os
 
 baseURL = "http://api.openweathermap.org/data/2.5/weather"
-apiKey = "09cc49e8cc6fd18f0e3455a455e7835d"
+
+# Retrieving api key from environment
+try:
+    apiKey = os.environ['OPENWEATHERMAPKEY']
+except:
+    raise ValueError("OPENWEATHERMAPKEY is a required environment variable")
 
 
 def getCity():

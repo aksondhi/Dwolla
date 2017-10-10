@@ -24,8 +24,8 @@ def main():
             else:
                 print "No weather data available."
 
-        except ValueError:
-            print "Invalid city."
+        except Exception as e:
+            print e.message.title()
 
 
 if __name__ == "__main__":
