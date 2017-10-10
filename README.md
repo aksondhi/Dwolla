@@ -1,4 +1,4 @@
-Dwolla Technical Exercise
+Dwolla Technical Exercise [![Build Status](https://travis-ci.org/aksondhi/Dwolla.svg?branch=master)](https://travis-ci.org/aksondhi/Dwolla)
 =========================
 
 This is an implementation of [Dwolla's Technical Exercise](https://docs.google.com/document/d/1yvnOs0ALZzlY6iGwqBQtLA0__MIOeIAuubKpm1qFdgs/edit).
